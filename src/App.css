@@ -2,6 +2,15 @@
   text-align: center;
   background-color:'aqua';
 }
+table, th, td{
+border: "1px solid black",
+
+}
+
+th, td {
+  border: 1px solid black;
+  border-radius: 5px;
+}
 
 .App-logo {
   height: 40vmin;
