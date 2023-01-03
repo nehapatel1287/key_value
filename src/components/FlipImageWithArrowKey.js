@@ -3,26 +3,26 @@ import './style.css/flipImageWithArrowKey.css';
 
 const FlipImageWithArrowKey = () => {
     const [screen, setScreen] = useState({
-        active:false,
-        transform:""
+        active: false,
+        transform: ""
     });
 
-        console.log(screen.transform);
+    console.log(screen.transform);
 
     const keypressed = (event) => {
         if (event.keyCode === 39) {
-            setScreen({active:!screen.active,transform:"rotateY(180deg)"})
+            setScreen({ active: !screen.active, transform: "rotateY(180deg)" })
         }
         else if (event.keyCode === 37) {
-            setScreen({active:!screen.active,transform:"rotateY(0deg)"})
+            setScreen({ active: !screen.active, transform: "rotateY(0deg)" })
         }
 
 
         else if (event.keyCode === 38) {
-            setScreen({active:!screen.active,transform:"rotateX(180deg)"})
+            setScreen({ active: !screen.active, transform: "rotateX(180deg)" })
         }
         else if (event.keyCode === 40) {
-            setScreen({active:!screen.active,transform:"rotateX(0deg)"})
+            setScreen({ active: !screen.active, transform: "rotateX(0deg)" })
         }
 
     }
@@ -36,8 +36,8 @@ const FlipImageWithArrowKey = () => {
     }, [])
 
     return (
-        <div style={{ paddingTop: "20px"}} className='flip-box'>
-            <div className='flip-box-inner' style={{transform: !screen.active ? "" : screen.transform}}>
+        <div style={{ paddingTop: "20px" }} className='flip-box'>
+            <div className='flip-box-inner' style={{ transform: !screen.active ? "" : screen.transform }}>
                 <div className={"flip-box-front"}>
                     <img src='https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg' alt='save plants' />
                 </div>
@@ -46,10 +46,10 @@ const FlipImageWithArrowKey = () => {
                 </div>
             </div>
 
-            </div>
-            )
-        }
-        
-        export default FlipImageWithArrowKey
-        
+        </div>
+    )
+}
+
+export default FlipImageWithArrowKey
+
         // <button onClick={()=>setScreen(!screen)}>Flip</button>
